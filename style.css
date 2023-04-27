@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  :root {
+    --black: #131313;
+    --white: #fafafa;
+    --alpha: rgba(158, 45, 168, 0.4);
+    --shadow-first: rgba(92, 92, 92, 0.1);
+    --shadow-second: rgba(82, 82, 82, 0.2);
+    --border: #270927;
+    --marked: #f0f1a5;
+  }
+  
+  @font-face {
+    font-family: montserrat;
+    src: url(montserrat\MontserratAlternates-Bold.otf);
+}
+  
+  body {
+    background-color: var(--marked);
+  }
+  
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    padding: 3em;
+    margin-top: 0.5em;
+  }
+  
+  .select-title {
+    line-height: 3em;
+    font-weight: 600;
+    color: var(--alpha);
+  }
+  
+  input[type="file"] {
+    background-color: var(--alpha);
+    border-radius: 5px;
+  }
+  
+  input[name="file"] {
+    text-align: center;
+    padding: 13px;
+    color: var(--white);
+    overflow: hidden;
+    border-radius: 13px;
+    background: var(--alpha);
+    border: 3px solid var(--border);
+    box-shadow: -5px -5px 5px var(--shadow-first),
+      9px 9px  9px  var(--alpha), inset -5px -5px 5px var(--shadow-second),
+      inset 9px  9px  9px  var(--alpha);
+  }
+
+  .controls {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .buttons {
+    cursor: pointer;
+    position: relative;
+    width: 90px;
+    height: 90px;
+    margin: 13px;
+    overflow: hidden;
+    border-radius: 27px;
+    background: var(--alpha);
+    border: 3px solid var(--border);
+    box-shadow: -5px -5px 5px var(--shadow-first),
+    9px  9px  9px  var(--alpha), inset -5px -5px 5px var(--shadow-second),
+      inset 9px  9px  9px  var(--alpha);
+  }
+  
+  .buttons:hover {
+    background: linear-gradient(to bottom, var(--alpha));
+    border: 3px solid var(--border);
+    transition: all 0.3s ease-in;
+  }
+  
+  .button:focus {
+    background: var(--marked);
+    color: var(--white);
+    transition: all 0.3s ease-in;
+  }
+  
+  .bi {
+    font-size: 3em;
+    color: var(--border);
+  }
+  
